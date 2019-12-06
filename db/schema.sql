@@ -1,3 +1,3 @@
 CREATE DATABASE burgerSequel_db;
-USE burgersSequel_db;
+USE burgerSequel_db;
 
