@@ -26,9 +26,19 @@ router.post("/api/burgers", function(req, res) {
     });
 });
 
-// router.put("/burgers/:id", function(req, res) {
-    
-// });
+router.put("/api/burgers/:id", function(req, res) {
+    db.Burger.update({
+        devoured: req.body.devoured
+    }, {
+        where: {
+            id: req.body.id
+        }
+    }).then(function(dbBurger) {
+        res.json(dbBurger);
+    }).catch(function(err) {
+        res.json(err);
+    });
+});
 
 // router.delete("/:id", function(req, res) {
     

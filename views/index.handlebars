@@ -10,7 +10,7 @@
                     <form value={{id}} class="id">
                         {{name}}
                         <input type="hidden" name="devoured" value="true">
-                        <button type="submit" class="eat" value={{id}} data-devoured={{devoured}}>EAT THE BURGER</button>
+                        <button type="submit" class="eat" value={{id}} data-devour={{devoured}}>EAT THE BURGER</button>
                     </form>
                 </li>
             </div>
@@ -21,10 +21,10 @@
 <h2>Burders been eated</h2>
 
 <ul>
-    {{#each burgers}}
-        {{#if this.devoured}}
+    {{#each dbBurger}}
+        {{#if devoured}}
             <div class="eatedBurgs">
-                <li>{{this.burger_name}}</li>
+                <li>{{name}}</li>
             </div>
         {{/if}}
     {{/each}}

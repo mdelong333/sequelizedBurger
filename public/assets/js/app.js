@@ -5,7 +5,7 @@ $(document).ready(function() {
         // console.log("click");
         var newBurg = {
             name: $("#burger-entry").val().trim(),
-            devoured: false
+            devoured: 0
         };
         $.ajax({
             method: "POST",
@@ -21,14 +21,19 @@ $(document).ready(function() {
         event.preventDefault();
         // console.log("clicked!");
         var burger_id = $(this).val();
-        var devoured = $(this).attr("data-devoured");
         console.log(burger_id);
-        console.log(devoured);
+
+        var devourBurg = {
+            id: burger_id,
+            devoured: 1
+        };
+
         $.ajax({
             method: "PUT",
-            url: "/api/burgers/" + burger_id
+            url: "/api/burgers/" + burger_id,
+            data: devourBurg
         }).then(function(data) {
             location.reload();
         });
-    })
-})
+    });
+});
