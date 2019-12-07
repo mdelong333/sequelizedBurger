@@ -5,38 +5,42 @@
 </div>
 
 <div class="row">
-    <div class="container burgs col s6">
-        <h3>Burgs Ready</h3>
+    <div class="container col s6">
+        <div class="ready">
+            <h3>Burgs Ready</h3>
 
-        <ul>
-            {{#each dbBurger}}
-                {{#unless devoured}}
-                    <div class="availBurgs">
-                        <li>
-                            <form value={{id}} class="id burgers">
-                                <h6>{{name}}</h6>
-                            </form>
-                            <button type="submit" class="eat waves-effect waves-light btn-small" value={{id}} data-devour={{devoured}}>EAT THE BURGER</button>
-                        </li>
-                        <br>
-                    </div>
-                {{/unless}}
-            {{/each}}
-        </ul>
+            <ul>
+                {{#each dbBurger}}
+                    {{#unless devoured}}
+                        <div class="availBurgs">
+                            <li>
+                                <form value={{id}} class="id burgers">
+                                    <h6>{{name}}</h6>
+                                </form>
+                                <button type="submit" class="eat waves-effect waves-light btn-small amber darken-4" value={{id}} data-devour={{devoured}}>EAT THE BURGER</button>
+                            </li>
+                            <br>
+                        </div>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 
-    <div class="container eated col s6">
-        <h3>Burders been eated</h3>
+    <div class="container col s6">
+        <div class="eated">
+            <h3>Burgs been eated</h3>
 
-        <ul>
-            {{#each dbBurger}}
-                {{#if devoured}}
-                    <div class="eatedBurgs">
-                        <li>{{name}}</li>
-                    </div>
-                {{/if}}
-            {{/each}}
-        </ul>
+            <ul>
+                {{#each dbBurger}}
+                    {{#if devoured}}
+                        <div class="eatedBurgs">
+                            <li class="ate"><h6>{{name}}<h6></h6></li>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -50,7 +54,7 @@
                 <input type="text" id="burger-entry" name="name">
             </div>
 
-            <button type="submit" class="make">Burder Ready!</button>
+            <button type="submit" class="make waves-effect waves-light btn red darken-1">Burder Ready!</button>
         </form>
     </div>
 </div>
