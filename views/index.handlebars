@@ -1,42 +1,54 @@
-<h1>Make a Burder, Eat a Burder</h1>
+<div class="row">
+    <div class="col s6 push-l3 push-m2">
+        <h2>Make a <span><i class="fas fa-hamburger"></i></span>, Eat da <span><i class="fas fa-hamburger"></i></span></h2>
+    </div>
+</div>
 
-<h2>Available Burgs</h2>
+<div class="row">
+    <div class="container burgs col s6">
+        <h3>Burgs Ready</h3>
 
-<ul>
-    {{#each dbBurger}}
-        {{#unless devoured}}
-            <div class="availBurgs">
-                <li>
-                    <form value={{id}} class="id">
-                        {{name}}
-                        <input type="hidden" name="devoured" value="true">
-                        <button type="submit" class="eat" value={{id}} data-devour={{devoured}}>EAT THE BURGER</button>
-                    </form>
-                </li>
-            </div>
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burders been eated</h2>
-
-<ul>
-    {{#each dbBurger}}
-        {{#if devoured}}
-            <div class="eatedBurgs">
-                <li>{{name}}</li>
-            </div>
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add Burg</h2>
-
-<form class="add-form">
-    <div class="form-group">
-        <label for="burger-entry">Make Burg</label>
-        <input type="text" id="burger-entry" name="name">
+        <ul>
+            {{#each dbBurger}}
+                {{#unless devoured}}
+                    <div class="availBurgs">
+                        <li>
+                            <form value={{id}} class="id">
+                                {{name}}
+                                <input type="hidden" name="devoured" value="true">
+                                <button type="submit" class="eat" value={{id}} data-devour={{devoured}}>EAT THE BURGER</button>
+                            </form>
+                        </li>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </ul>
     </div>
 
-    <button type="submit" class="make">Burder Ready!</button>
-</form>
+    <div class="container eated col s6">
+        <h3>Burders been eated</h3>
+
+        <ul>
+            {{#each dbBurger}}
+                {{#if devoured}}
+                    <div class="eatedBurgs">
+                        <li>{{name}}</li>
+                    </div>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div class="row add">
+    <h3>Add Burg</h3>
+
+    <form class="add-form">
+        <div class="form-group">
+            <label for="burger-entry">Make Burg</label>
+            <input type="text" id="burger-entry" name="name">
+        </div>
+
+        <button type="submit" class="make">Burder Ready!</button>
+    </form>
+</div>
