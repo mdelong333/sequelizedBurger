@@ -3,14 +3,14 @@
 <h2>Available Burgs</h2>
 
 <ul>
-    {{#each burgers}}
-        {{#unless this.devoured}}
+    {{#each dbBurger}}
+        {{#unless devoured}}
             <div class="availBurgs">
                 <li>
-                    <form value={{this.id}} class="id">
-                        {{this.burger_name}}
+                    <form value={{id}} class="id">
+                        {{name}}
                         <input type="hidden" name="devoured" value="true">
-                        <button type="submit" class="eat id" value={{this.id}} >EAT THE BURGER</button>
+                        <button type="submit" class="eat" value={{id}} data-devoured={{devoured}}>EAT THE BURGER</button>
                     </form>
                 </li>
             </div>
@@ -32,11 +32,11 @@
 
 <h2>Add Burg</h2>
 
-<form class="add-form" action="burgers/api" method="POST">
+<form class="add-form">
     <div class="form-group">
-        <label for="burger-entry">Make Burder</label>
+        <label for="burger-entry">Make Burg</label>
         <input type="text" id="burger-entry" name="name">
     </div>
 
-    <button type="submit">Burder Ready!</button>
+    <button type="submit" class="make">Burder Ready!</button>
 </form>

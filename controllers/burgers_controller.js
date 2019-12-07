@@ -15,11 +15,16 @@ router.get("/api/burgers", function(req, res) {
     })
 });
 
-// router.post("/burgers/api", function(req, res) {
-//     db.Burger.create({
-//         name
-//     })
-// });
+router.post("/api/burgers", function(req, res) {
+    db.Burger.create({
+        name: req.body.name,
+        devoured: req.body.devoured
+    }).then(function(dbBurger) {
+        res.json(dbBurger);
+    }).catch(function(err) {
+        res.json(err);
+    });
+});
 
 // router.put("/burgers/:id", function(req, res) {
     
