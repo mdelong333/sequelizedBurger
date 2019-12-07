@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col s6 push-l3 push-m2 headline">
+    <div class="col s12 push-l3 push-m2 headline">
         <h2>Make a <span><i class="fas fa-hamburger"></i></span>, Eat da <span><i class="fas fa-hamburger"></i></span></h2>
     </div>
 </div>
@@ -13,12 +13,12 @@
                 {{#unless devoured}}
                     <div class="availBurgs">
                         <li>
-                            <form value={{id}} class="id">
-                                {{name}}
-                                <input type="hidden" name="devoured" value="true">
-                                <button type="submit" class="eat" value={{id}} data-devour={{devoured}}>EAT THE BURGER</button>
+                            <form value={{id}} class="id burgers">
+                                <h6>{{name}}</h6>
                             </form>
+                            <button type="submit" class="eat waves-effect waves-light btn-small" value={{id}} data-devour={{devoured}}>EAT THE BURGER</button>
                         </li>
+                        <br>
                     </div>
                 {{/unless}}
             {{/each}}
@@ -41,14 +41,16 @@
 </div>
 
 <div class="row add">
-    <h3>Add Burg</h3>
+    <div class="container">
+        <h3>Add Burg</h3>
 
-    <form class="add-form">
-        <div class="form-group">
-            <label for="burger-entry">Make Burg</label>
-            <input type="text" id="burger-entry" name="name">
-        </div>
+        <form class="add-form">
+            <div class="form-group">
+                <label for="burger-entry" class="burger-form">Make Burg</label>
+                <input type="text" id="burger-entry" name="name">
+            </div>
 
-        <button type="submit" class="make">Burder Ready!</button>
-    </form>
+            <button type="submit" class="make">Burder Ready!</button>
+        </form>
+    </div>
 </div>
