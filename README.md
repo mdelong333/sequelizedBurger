@@ -1,7 +1,7 @@
 # sequelizedBurger
 https://thawing-ocean-98949.herokuapp.com/
 
-![demo](./public/images/sequelized-burger.gif)
+![demo](./public/assets/images/sequelized-burger.gif)
 
 ## Description
 
