@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $(".make").on("submit", function(event) {
+    $(".make").on("click", function(event) {
         // event.preventDefault();
         // console.log("click");
         var newBurg = {
