@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    $(".make").on("click", function(event) {
-        event.preventDefault();
+    $(".make").on("submit", function(event) {
+        // event.preventDefault();
         // console.log("click");
         var newBurg = {
             name: $("#burger-entry").val().trim(),
