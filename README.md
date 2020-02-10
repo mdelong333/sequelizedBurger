@@ -1,6 +1,8 @@
 # sequelizedBurger
 https://thawing-ocean-98949.herokuapp.com/
 
+![demo](./public/images/sequelized-burger.gif)
+
 ## Description
 
 Burger App is a single-page app that allows users to add the names of burgers they'd like to eat and devour burgers once they've been added. It uses HandlebarsJS, MySQL database, and Sequelize.
